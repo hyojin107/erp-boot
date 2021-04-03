@@ -1,0 +1,12 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp
+      suffix: .jsp
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    username: ERP
+    password: java
+server:
+  port: 8080
