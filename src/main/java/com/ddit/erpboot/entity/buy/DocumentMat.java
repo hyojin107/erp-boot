@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@ToString
+@ToString(exclude = {"document"})
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 public class DocumentMat {

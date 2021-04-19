@@ -6,6 +6,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -27,6 +28,10 @@ public class Document {
     @ManyToOne
     @JoinColumn(name = "emp_no")
     private Employee employee;
+
+    @OneToMany
+    @JoinColumn(insertable = false, updatable = false)
+    private List<DocumentMat> documentMatList;
 
     public Document(String empNo, LocalDateTime docInDate) {
         this.empNo = empNo;
