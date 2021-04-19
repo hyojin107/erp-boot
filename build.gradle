@@ -20,32 +20,37 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.security:spring-security-taglibs'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    //implementation 'org.springframework.security:spring-security-taglibs'
+    //implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
+
+    implementation 'com.auth0:java-jwt:3.11.0'
+    implementation 'com.google.code.gson:gson'
+    implementation 'com.google.guava:guava:30.0-jre'
+    implementation 'commons-io:commons-io:2.8.0'
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    implementation 'org.apache.commons:commons-lang3'
+    //implementation 'org.mariadb.jdbc:mariadb-java-client'
+
     // DB
-    implementation 'com.oracle.ojdbc:ojdbc8:19.3.0.0'
-    //implementation 'com.oracle:ojdbc6:12.1.0.2'
+    //compile files('libs/ojdbc8-19.7.0.0')
+    //implementation 'com.oracle.database.jdbc:ojdbc8:19.7.0.0'
     //implementation 'org.apache.commons:commons-dbcp2:2.7.0' // 커넥션 풀
 
-    //implementation 'com.google.code.gson:gson'
-    //implementation 'com.google.guava:guava:30.0-jre'
-    implementation 'commons-io:commons-io:2.8.0'
-    implementation 'javax.mail:mail:1.4.7'
-
-    implementation 'com.itextpdf:itextpdf:5.5.13'
-    implementation 'com.itextpdf.tool:xmlworker:5.5.13'
-    implementation 'com.itextpdf:html2pdf:2.0.2'
-    //implementation 'com.google.cloud:google-cloud-vision:1.75.0'
+//    implementation 'javax.mail:mail:1.4.7'
+//    implementation 'com.itextpdf:itextpdf:5.5.13'
+//    implementation 'com.itextpdf.tool:xmlworker:5.5.13'
+//    implementation 'com.itextpdf:html2pdf:2.0.2'
 
     // jsp 사용을 위한 의존성 추가
-    implementation 'javax.servlet:jstl'
-    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+//    implementation 'javax.servlet:jstl'
+//    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
-    //runtimeOnly 'com.h2database:h2'
+    //runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
+    runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
